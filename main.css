@@ -1,0 +1,142 @@
+/* GLOBAL STYLING */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0px 16px;
+  background: linear-gradient(to bottom, tomato, salmon);
+}
+
+h1 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* MAIN STYLING */
+
+.faq {
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.faq__card {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  height: 100%;
+  max-height: 500px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.faq__img {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: -150px;
+  width: 100%;
+}
+
+.faq__img img {
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.faq__questions {
+  width: 100%;
+  max-width: 450px;
+  padding-top: 80px;
+  margin: 0 auto;
+}
+
+.accordion__question {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.accordion__question span {
+  font-size: 15px;
+  margin-right: auto;
+}
+
+.accordion__question i {
+  transition: all 400ms ease-in-out;
+}
+
+.faq__answer {
+  max-height: 0;
+  color: #787887;
+  max-width: 320px;
+  font-size: 13px;
+  transition: all 275ms ease-in-out;
+}
+
+.faq__active img {
+  transform: rotate(180deg);
+}
+
+.faq__active .answer {
+  margin-bottom: 16px;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 700px) {
+  .faq__card {
+    overflow: hidden;
+    padding: 60px;
+  }
+
+  .faq__img {
+    top: 0;
+    left: -80px;
+    height: 100%;
+    width: initial;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .faq__img img {
+    width: 300px;
+    height: auto;
+  }
+
+  h1 {
+    text-align: start;
+  }
+  .faq__questions {
+    padding-top: 0;
+    max-width: 370px;
+    margin: 0px 0px 0px auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .faq__card {
+    padding: 85px 95px 65px 30px;
+  }
+  .faq__img img {
+    width: 425px;
+    height: auto;
+  }
+}
